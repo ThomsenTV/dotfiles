@@ -1,0 +1,21 @@
+- defaults:
+    link:
+      relink: true
+      type: symlink
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: .zshrc
+    ~/.bashrc: .bashrc
+    ~/.gitconfig: .gitconfig
+    ~/.config/rofi: .config/rofi
+    ~/.config/nvim: .config/nvim
+    ~/.config/kitty: .config/kitty
+    ~/.config/godot: .config/godot
+
+- create:
+    - ~/.vim/undo-history
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
