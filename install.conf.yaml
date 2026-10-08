@@ -13,6 +13,7 @@
     ~/.config/nvim: .config/nvim
     ~/.config/kitty: .config/kitty
     ~/.config/godot: .config/godot
+    ~/.config/hypr: .config/hypr
 
 - create:
     - ~/.vim/undo-history
