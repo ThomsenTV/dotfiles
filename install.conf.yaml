@@ -14,6 +14,7 @@
     ~/.config/kitty: .config/kitty
     ~/.config/godot: .config/godot
     ~/.config/hypr: .config/hypr
+    ~/.config/waybar: .config/waybar
 
 - create:
     - ~/.vim/undo-history
