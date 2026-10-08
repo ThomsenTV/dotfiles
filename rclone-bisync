@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+sleep 15
+mkdir -p "$HOME/rclone/logs"
+
+# Timestamp for the log file
+TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+LOGFILE="$HOME/rclone/logs/rclone-$TIMESTAMP.log"
+
+echo "===== $(date) ====="
+echo "Starting rclone bisync..."
+
+rclone bisync ~/Documents/Vault/Brain gdrive:DriveSyncFiles/Brain \
+--backup-dir1 ~/Documents/VaultBackup \
+--backup-dir2 gdrive:.Vaults/BrainBackup \
+--compare size,modtime,checksum \
+-v \
+--drive-skip-gdocs --drive-acknowledge-abuse \
+--fix-case --resilient --recover --max-lock 2m \
+--conflict-resolve newer --max-delete 50 \
+2>&1 | tee "$LOGFILE"
+
+EXIT_CODE=$?
+
+echo
+echo "Finished at $(date)"
+echo "Exit code: $EXIT_CODE"
+
+find "$HOME/rclone/logs" -type f -name 'rclone-*.log' -mtime +30 -delete
+exit "$EXIT_CODE"

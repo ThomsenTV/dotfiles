@@ -15,9 +15,12 @@
     ~/.config/godot: .config/godot
     ~/.config/hypr: .config/hypr
     ~/.config/waybar: .config/waybar
+    ~/rclone/rclone-bisync: rclone-bisync
 
 - create:
     - ~/.vim/undo-history
+    - ~/rclone
+    - ~/rclone/logs
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
