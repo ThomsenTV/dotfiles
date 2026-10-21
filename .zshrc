@@ -277,6 +277,7 @@ export PATH=/home/ohms/rclone/:/home/ohms/.local/bin:$HOME/.cabal/bin:$HOME/.ghc
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export MANROFFOPT='-c'
+export MANPAGER='bat'
 
 # setup the help command to work as in bash
 # Source - https://superuser.com/a/1563859
