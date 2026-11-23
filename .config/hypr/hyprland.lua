@@ -16,7 +16,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd("nm-applet")
   hl.exec_cmd("hyprpaper & firefox")
-  hl.exec_cmd("waybar")
+  --hl.exec_cmd("waybar") --waybar starts somewhere else
   hl.exec_cmd("wl-paste -p -t text --watch clipman store -P --histpath=\"~/.local/share/clipman-primary.json\"") -- clipboard
   hl.exec_cmd("fcitx5")
   hl.exec_cmd("wl-gammarelay")

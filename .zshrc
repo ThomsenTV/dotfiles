@@ -273,11 +273,11 @@ fi
 if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
-export PATH=/home/ohms/rclone/:/home/ohms/.local/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH
+export PATH=/home/ohms/cmds:/home/ohms/rclone/:/home/ohms/.local/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export MANROFFOPT='-c'
-export MANPAGER='bat'
+export MANPAGER='less'
 
 # setup the help command to work as in bash
 # Source - https://superuser.com/a/1563859
