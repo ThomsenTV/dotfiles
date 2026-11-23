@@ -15,6 +15,7 @@
     ~/.config/godot: .config/godot
     ~/.config/hypr: .config/hypr
     ~/.config/waybar: .config/waybar
+    ~/.config/swappy: .config/swappy
     ~/rclone/rclone-bisync: rclone-bisync
 
 - create:
